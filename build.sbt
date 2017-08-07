@@ -120,7 +120,7 @@ lazy val backend: Project = (project in file("backend"))
         baseDirectory.value.getParentFile / ui.base.getName / "dist"
       )
     },
-    assemblyWarName in assembly := "bootzooka.war",
+    assemblyJarName in assembly := "bootzooka.jar",
     assembly := assembly.dependsOn(npmTask.toTask(" run build")).value
   )
 
